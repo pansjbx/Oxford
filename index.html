@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ensaio Académico - Matheus Silva Sá</title>
+    <style>
+        body {
+            background-color: #e0e0e0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px 0;
+            margin: 0;
+            font-family: "Times New Roman", Times, serif;
+        }
+
+        /* Estrutura de Página A4 */
+        .page {
+            background-color: white;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 3cm 2cm 2cm 3cm;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            color: black;
+            line-height: 1.5;
+            box-sizing: border-box;
+            margin-bottom: 30px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Página 1: Centralização da Imagem */
+        .page-image {
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main-logo {
+            max-width: 80%;
+            height: auto;
+        }
+
+        /* Página 2: Formatação de Texto */
+        h1 {
+            text-align: center;
+            font-size: 14pt;
+            text-transform: uppercase;
+            margin-top: 1cm;
+            margin-bottom: 1.5cm;
+        }
+
+        p {
+            text-align: justify;
+            text-indent: 1.25cm;
+            margin: 0 0 12pt 0;
+            font-size: 12pt;
+        }
+
+        /* Página 3: Botão e Área Revelada */
+        .page-button {
+            justify-content: center;
+            align-items: center;
+        }
+
+        .button-container {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .warning-text {
+            font-size: 18pt;
+            font-weight: bold;
+            color: #b71c1c;
+            margin-bottom: 30px;
+        }
+
+        #action-button {
+            padding: 25px 60px;
+            font-size: 18pt;
+            font-weight: bold;
+            cursor: pointer;
+            background-color: #ff0000;
+            color: white;
+            border: 3px solid #000;
+            border-radius: 8px;
+            font-family: "Times New Roman", serif;
+            margin-bottom: 40px;
+        }
+
+        /* Área que aparece e desaparece */
+        #revealed-content {
+            display: none; /* Escondido inicialmente */
+            text-align: center;
+            animation: fadeIn 0.5s;
+        }
+
+        #secret-message {
+            font-size: 28pt;
+            font-weight: bold;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .revealed-image {
+            max-width: 200px; /* Tamanho da imagem revelada */
+            height: auto;
+            border: 2px solid #000;
+        }
+
+        /* Numeração Discreta */
+        .number-only {
+            position: absolute;
+            bottom: 1cm;
+            right: 2cm;
+            font-size: 10pt;
+            color: #666;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="page page-image">
+    <img src="Captura de tela 2026-04-19 210601.png" alt="John Locke Institute" class="main-logo">
+    <div class="number-only">1</div>
+</div>
+
+<div class="page">
+    <h1>"Why do we care what happens to our body after death?"</h1>
+
+    <p>Often, maturity and life experience lead to a strictly pragmatic view of existence, in which life is seen as the only true value and the posthumous body as merely a disposable shell.</p>
+    <p>Upon investigating this perception, I was confronted with the argument that concern should cease at the exact moment of death. However, this logic contrasts with a universal human restlessness: why do we still project ourselves onto that inert matter? The persistent thought regarding the state of the body in the grave is not an irrationality, but rather a reflection of the mind's difficulty in processing the transition from physical presence to definitive absence.</p>
+    <p>From a Lockean perspective, the body is the foundation of property and liberty. If we accept that an individual possesses rights over their posthumous image and will as expressed in testaments, the body becomes the final bastion of this autonomy. To ignore the fate of physical remains after death would be to violate the "social contract" that ensures a person's dignity does not expire with their final breath.</p>
+    <p>Nevertheless, a materialist critic might argue that, once consciousness ceases, the "individual" no longer exists and, therefore, the corpse becomes a common object without rights.</p>
+    <p>Yet, such a view fails to recognize that social order depends on the reliability of future guarantees. If society strips the dead of their dignity, it signals to the living that their sovereign will is ephemeral and conditional. Respect for the body, therefore, is not a service rendered to inert flesh, but a protection of the principle of autonomy that sustains civilization itself.</p>
+    <p>Complementing this ethical perspective, psychology explains the root of this care. As psychologist Isadora points out, the human brain requires time to "teach itself" about someone's absence. Concern for the body — the instinctive fear that a loved one might feel cold or discomfort — is not an irrational morbidity, but a neurobiological adaptation strategy. The brain seeks concrete images of death to accept a painful reality. Therefore, caring for the body is a necessary ritual for mourning; without respect for the materiality of the deceased, the survivors' process of psychic reorganization becomes fragmented.</p>
+    <p>In short, we should care about our bodies after death through a two-way street: out of respect for the sovereignty of the individual who has passed and for the preservation of the mental health of the community that remains. The dead body is the final link that allows the living to transform physical presence into affective memory. Respecting the corpse is, ultimately, an act of preserving our own humanity.
+
+    
+    <div class="number-only">2</div>
+</div>
+
+<div class="page page-button">
+    <div class="button-container">
+        <div class="warning-text">NÃO APERTE O BOTÃO</div>
+        <button id="action-button" onclick="revealContent()">BOTÃO</button>
+        
+        <div id="revealed-content">
+            <span id="secret-message">se matar xanas</span>
+            <img src="Captura de tela 2026-04-19 201419.png" alt="Crest" class="revealed-image">
+        </div>
+    </div>
+    <div class="number-only">3</div>
+</div>
+
+<script>
+    function revealContent() {
+        const content = document.getElementById('revealed-content');
+        
+    
+        content.style.display = 'block';
+
+        
+        setTimeout(() => {
+            content.style.display = 'none';
+        }, 3000);
+    }
+</script>
+
+</body>
+</html>
